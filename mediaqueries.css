@@ -1,0 +1,25 @@
+@media all and (min-width:1200px){
+    .hideonlaptop{
+        display: none;
+    }
+}
+
+
+
+@media all and (max-width: 950px){
+    .hideonmobile{
+        display: none;
+    }
+}
+
+@media all and (max-width:850px){
+    .hideonmobile{
+        display: none;
+    }
+}
+
+@media all and (max-width:400px){
+    .hideonmobile{
+        display: none;
+    }
+}
