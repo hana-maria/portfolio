@@ -255,12 +255,12 @@ h1 span{
 }
 
 .card-wrapper{
-    margin-top: 30px;
-    margin-left: 150px;
-    margin-right: 150px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
     justify-content: space-between;
-    gap: 15px;
+    gap: 20px;
+    margin: 0 80px;
    
 }
 .card h2{
@@ -284,11 +284,12 @@ h1 span{
 }
 
 .card-wrapper .card {
+    flex: 1 1 300px;
     border: 2px solid pink;
     width: 100%;
+    height: 425px;
     display: flex;
     flex-direction: column;   
-    position: relative;
 }
 .card-wrapper .card .card-items{
     margin-bottom: 10px;
@@ -313,18 +314,18 @@ h1 span{
     color: #f10d9a;
 }
 
-#card1{
+
+.line-container{
     position: relative;
 }
-
-#card1::before{
+.line-container::before{
     content: "";
     position: absolute;
     width: 2px;
-    height: 355px;
+    height: calc(100% + 8px);
     background-color: #f10d9a;
     left: 15px;
-    top: 55px;
+    top: 0;
 }
 
 .card-wrapper .card .card-items::before{
@@ -339,33 +340,6 @@ h1 span{
     border: 1px solid #f10d9a;
 }
 
-#card2{
-    position: relative;
-}
-
-#card2::before{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 245px;
-    background-color: #f10d9a;
-    left: 15px;
-    top: 55px;
-}
-
-#card3{
-    position: relative;
-}
-
-#card3::before{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 190px;
-    background-color: #f10d9a;
-    left: 15px;
-    top: 55px;
-}
 
 .skills h1{
     margin-top: 100px;
@@ -486,303 +460,3 @@ footer{
     background-color: pink;
 }
 
-@media (min-width: 1200px) {
-    .hideonlaptop{
-        display: none;
-    }
-    .tech {
-        flex-wrap: wrap; /* Allow items to wrap */
-        justify-content: center; /* Center items horizontally */
-        gap: 30px; /* Space between items */
-        margin-left: 20px; /* Adjust margins as needed */
-        margin-right: 20px;
-    }
-
-    .tech-icons {
-        flex: 0 0 calc(50% - 30px); /* Set each item to take up roughly 50% of the width minus the gap */
-        max-width: 220px; /* Optional: Set a max width for the icons */
-    }
-
-    /* Adjust font sizes for the tech icons if needed */
-    .tech-icons span {
-        font-size: 18px; /* Adjust the font size of the text inside tech icons */
-    }
-}
-
-
-@media (max-width: 950px) {
-    .hideonmobile{
-        display: none;
-    }
-    /* Adjust the navigation bar */
-    .nav-bar {
-        padding: 0 20px; /* Reduce padding for smaller screens */
-    }
-    
-    #logo {
-        font-size: 30px; /* Smaller logo font size */
-    }
-
-    .nav-links a {
-        margin-left: 20px; /* Reduce space between links */
-        font-size: 16px; /* Smaller link font size */
-    }
-    .home{
-        margin-top: 100px;
-    }
-
-    .home h2 {
-        font-size: 40px; /* Smaller heading size */
-    }
-
-    .home h1 {
-        font-size: 60px; /* Smaller main heading size */
-    }
-
-    .social-links i {
-        width: 30px; /* Smaller social icon size */
-        height: 30px; /* Smaller social icon size */
-        font-size: 18px; /* Smaller icon font size */
-    }
-
-    #pfp {
-        margin-top: 100px;
-        width: 400px; /* Smaller profile picture size */
-    }
-
-    .about-me {
-        padding: 0 30px; /* Reduce padding */
-    }
-
-    .card-wrapper {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center the cards */
-    }
-
-    .card {
-        width: 90%; /* Reduce card width */
-    }
-    #card1::before{
-        content: "";
-        position: absolute;
-        width: 2px;
-        height: 315px;
-        background-color: #f10d9a;
-        left: 15px;
-        top: 55px;
-    }
-    #card2::before{
-        content: "";
-        position: absolute;
-        width: 2px;
-        height: 230px;
-        background-color: #f10d9a;
-        left: 15px;
-        top: 55px;
-    }
-    
-    #card3::before{
-        content: "";
-        position: absolute;
-        width: 2px;
-        height: 180px;
-        background-color: #f10d9a;
-        left: 15px;
-        top: 55px;
-    }
-    .tech {
-        flex-direction: column; /* Stack tech icons vertically */
-        align-items: center; /* Center tech icons */
-    }
-
-    .contact .input-boxes {
-        margin: 0 50px;
-        padding: 0 20px; /* Reduce padding for contact form */
-    }
-
-    #name, #e-mail, #subject {
-        height: 40px; /* Smaller input height */
-    }
-
-    #message {
-        height: 150px; /* Smaller message box */
-    }
-}
-
-@media (max-width: 800px){
-    
-    .nav-bar {
-        padding: 0 10px; /* Further reduce padding for smaller screens */
-    }
-    
-    #logo {
-        font-size: 28px; /* Smaller logo font size */
-    }
-    .home{
-        margin-top: 100px;
-    }
-
-    .home h2 {
-        font-size: 36px; /* Smaller heading size */
-    }
-
-    .home h1 {
-        font-size: 50px; /* Smaller main heading size */
-    }
-
-    .social-links i {
-        width: 25px; /* Smaller social icon size */
-        height: 25px; /* Smaller social icon size */
-        font-size: 16px; /* Smaller icon font size */
-    }
-
-    #pfp {
-        margin-top: 100px;
-        width: 400px; 
-        margin-left: 150px;/* Smaller profile picture size */
-    }
-
-    .about-me {
-        padding: 0 30px; /* Further reduce padding */
-    }
-
-    .card-wrapper {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center the cards */
-    }
-
-    .card {
-        width: 95%; /* Reduce card width */
-    }
-
-    #card1::before{
-        content: "";
-        position: absolute;
-        width: 2px;
-        height: 335px;
-        background-color: #f10d9a;
-        left: 15px;
-        top: 55px;
-    }
-    #card2::before{
-        content: "";
-        position: absolute;
-        width: 2px;
-        height: 230px;
-        background-color: #f10d9a;
-        left: 15px;
-        top: 55px;
-    }
-    
-    #card3::before{
-        content: "";
-        position: absolute;
-        width: 2px;
-        height: 180px;
-        background-color: #f10d9a;
-        left: 15px;
-        top: 55px;
-    }
-    .tech {
-        flex-direction: column; /* Stack tech icons vertically */
-        align-items: center; /* Center tech icons */
-    }
-
-    .contact .input-boxes {
-        margin: 0 50px;
-        padding: 0 10px; /* Further reduce padding for contact form */
-    }
-
-    #name, #e-mail, #subject {
-        height: 35px; /* Smaller input height */
-    }
-
-    #message {
-        height: 120px; /* Smaller message box */
-    }
-
-}
-    
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column; /* Stacks items vertically */
-    }
-
-    .right {
-        order: -1; /* Places the image first */
-    }
-
-    .left {
-        text-align: center; /* Centers the text on smaller screens */
-    }
-
-    #pfp {
-        width: 100%; /* Adjust the image size to fit the screen */
-        max-width: 400px; /* Optional: Set a max width to control the image size */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 100px;
-    }
-
-    .social-links {
-        margin-top: 20px; /* Adds some space between text and social links */
-    }
-}
-
-@media (max-width: 400px) {
-    .tech {
-        flex-direction: column; /* Stack tech icons vertically for small screens */
-        align-items: center; /* Center tech icons */
-        gap: 15px; /* Reduce gap between icons */
-    }
-    .home h1,h2 {
-
-        font-size: 50px; 
-        white-space: nowrap; 
-    }
-    .home {
-        flex-direction: column; /* Stacks items vertically */
-        padding-left: 200px;
-    }
-    #pfp{
-        width: 350px;
-    }
-    .right {
-        margin-top: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        order: -1; /* Places the image first */
-    }
-
-    .left {
-        padding: 0 0;
-        margin-top: 5px;
-        text-align: center; /* Centers the text on smaller screens */
-    }
-
-    .social-links i {
-        width: 25px; /* Smaller social icon size */
-        height: 25px; /* Smaller social icon size */
-        font-size: 16px; /* Smaller icon font size */
-    }
-
-    .about-me{
-        padding: 0 10px;
-    }
-    .tech-icons {
-        flex: 0 0 100%; /* Each icon takes the full width */
-        max-width: 100%; /* Ensure the icon does not exceed the screen width */
-        padding: 10px; /* Add some padding for touch targets */
-    }
-
-    .tech-icons img {
-        width: 150px; /* Set a smaller width for images */
-        height: 150px; /* Set a smaller height for images */
-    }
-
-    .tech-icons span {
-        font-size: 16px; /* Smaller font size for text inside tech icons */
-    }
-}
