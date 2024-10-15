@@ -1,0 +1,788 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    outline: none;
+    list-style-type: none;
+    color: var(--primary);
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif, Georgia, 'Times New Roman', Times, serif;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; 
+}
+
+.nav-bar {
+    width: 100%;
+    height: 70px;
+    padding: 0 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 0px black;
+    background-color: white;
+}
+
+#logo{
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #f10d9a;
+}
+
+.side-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height:100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.side-menu a{
+    width: 100%;
+    font-size: 20px;
+    color: #f10d9a;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f10d9a;
+}
+
+#cross-icon{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.side-menu i{
+    display: flex;
+    justify-content: right;
+}
+
+.nav-links i{
+    font-size: 25px;
+}
+
+.nav-links .hideonlaptop {
+    margin-right: auto; /* Push this element to the extreme right */
+}
+
+.nav-links a{
+    margin-left: 40px;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav-links a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 25px;
+    left: 0;
+    background-color: #f10d9a;
+    transition: width 0.4s ease;
+}
+.nav-links a.active::before{
+    width: 100%;
+}
+
+#home-link:hover, #about-link:hover, #skills-link:hover, #education-link:hover{
+    color: #f10d9a;
+}
+
+.home{
+    display: flex;
+    padding: 0 150px;
+}
+
+.left{
+    margin-top: 200px;
+}
+
+.home h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.home h1{
+    font-size: 70px;
+    font-weight: 520;
+    color: #f10d9a;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+.home h3{
+    font-size: 18px;
+}
+
+.social-links{
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    
+}
+.social-links i{
+    font-size: 20px;
+    width: 40px; 
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
+    border-radius: 50%;  
+    border: 2px solid black;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.social-links i:hover{
+    background-color: pink;
+    border: none;
+}
+
+.right{
+    margin-top: 150px;
+}
+
+#pfp{
+    width: 400px;
+    margin-left: 250px;
+    display: flex;
+    border: 2px solid #f10d9a;
+    border-radius: 50%;
+    padding: 15px;
+    background: linear-gradient(rgb(238, 230, 232), #ecc1dc);
+    transition: 0.3s ease;
+    z-index: 1;
+}
+#pfp:hover{
+    transform: scale(1.03);
+}
+
+.about-me{
+    padding: 0 150px;
+}
+h1 span{
+    font-size: 50px;
+    color: #f10d9a;
+    margin-right: 20px;
+}
+
+.headings{
+    margin-top: 250px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me p{
+    margin-top: 30px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-me ul{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+.li-items{
+    font-size: 18px;   
+}
+.about-me li{
+    border: 1px solid #f10d9a;
+    padding: 10px;
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid pink;  
+    text-align: center;cursor: pointer;
+    transition: 0.3s ease
+}
+
+.about-me li:hover{
+    box-shadow: 0 2px 10px rgba(255, 20, 150, 0.5);
+}
+
+.li-items {
+    font-weight: bold;
+    text-decoration: none;
+}
+.about-me button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 42px;
+    font-size: 18px;
+    color: #f10d9a;
+    border: none;
+    background-color: transparent;
+    border: 2px solid #f10d9a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.about-me button:hover{
+    background-color: #f10d9a;
+    color: white;
+}
+
+.education h1{
+    margin-top: 100px;
+}
+
+.card-wrapper{
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+   
+}
+.card h2{
+    font-size: 30px;
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.card h2::after{
+    content: '';
+    display: block;
+    width: 20%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: pink;
+    position: absolute;
+    transform: translateX(200%);
+    margin-top: 5px;
+
+}
+
+.card-wrapper .card {
+    border: 2px solid pink;
+    width: 100%;
+    display: flex;
+    flex-direction: column;   
+    position: relative;
+}
+.card-wrapper .card .card-items{
+    margin-bottom: 10px;
+    padding-left: 35px;
+    position: relative;
+    
+}
+.card-wrapper .card .card-items span{
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+}
+.card-wrapper .card .card-items p{
+    font-size: 14px;
+    color: #4c4e4f;
+    margin-bottom: 10px;
+    line-height: 1.5;
+
+}
+
+.card-wrapper .card .card-items a:hover{
+    color: #f10d9a;
+}
+
+#card1{
+    position: relative;
+}
+
+#card1::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 355px;
+    background-color: #f10d9a;
+    left: 15px;
+    top: 55px;
+}
+
+.card-wrapper .card .card-items::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ecc1dc;
+    border-radius: 50%;
+    left: 9px;
+    top: 8px;
+    border: 1px solid #f10d9a;
+}
+
+#card2{
+    position: relative;
+}
+
+#card2::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 245px;
+    background-color: #f10d9a;
+    left: 15px;
+    top: 55px;
+}
+
+#card3{
+    position: relative;
+}
+
+#card3::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 190px;
+    background-color: #f10d9a;
+    left: 15px;
+    top: 55px;
+}
+
+.skills h1{
+    margin-top: 100px;
+}
+
+.tech{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+}
+.tech-icons{
+    border: 2px solid pink;
+    border-radius: 0 25px 0 25px;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+.tech-icons:hover{
+    transform: scale(1.03);
+    box-shadow: 0 2px 10px rgba(255, 20, 150, 0.5);
+}
+
+.tech-icons img {
+    width: 200px;      
+    height: 200px;     
+    object-fit: cover; 
+    padding: 50px 50px;
+}
+.tech-icons span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.contact h1{
+    margin-top: 100px;
+}
+
+.input-boxes{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 200px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.line1-inputs{
+    display: flex;
+    gap: 15px;
+    
+}
+
+.inputs input{
+    width: 100%;
+}
+
+#name,#e-mail,#subject,#message{
+    border-radius: 4px;
+    border: none;
+    border: 2px solid pink;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+#name,#e-mail,#subject {
+    height: 50px;
+}
+
+#message{
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+
+}
+
+
+.send {
+    display: flex;
+    margin: 20px auto; 
+    width: 150px; 
+    height: 42px;
+    padding: 10px 20px; 
+    background-color: transparent; 
+    border: none; 
+    border: 2px solid #f10d9a;
+    color: #f10d9a;
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: 0.3s ease;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.send:hover{
+    background-color: #f10d9a;
+    color: white;
+}
+.contact {
+    text-align: center; 
+}
+
+footer{
+    margin-top: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid pink;
+    background-color: pink;
+}
+
+@media (min-width: 1200px) {
+    .hideonlaptop{
+        display: none;
+    }
+    .tech {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center; /* Center items horizontally */
+        gap: 30px; /* Space between items */
+        margin-left: 20px; /* Adjust margins as needed */
+        margin-right: 20px;
+    }
+
+    .tech-icons {
+        flex: 0 0 calc(50% - 30px); /* Set each item to take up roughly 50% of the width minus the gap */
+        max-width: 220px; /* Optional: Set a max width for the icons */
+    }
+
+    /* Adjust font sizes for the tech icons if needed */
+    .tech-icons span {
+        font-size: 18px; /* Adjust the font size of the text inside tech icons */
+    }
+}
+
+
+@media (max-width: 950px) {
+    .hideonmobile{
+        display: none;
+    }
+    /* Adjust the navigation bar */
+    .nav-bar {
+        padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+    
+    #logo {
+        font-size: 30px; /* Smaller logo font size */
+    }
+
+    .nav-links a {
+        margin-left: 20px; /* Reduce space between links */
+        font-size: 16px; /* Smaller link font size */
+    }
+    .home{
+        margin-top: 100px;
+    }
+
+    .home h2 {
+        font-size: 40px; /* Smaller heading size */
+    }
+
+    .home h1 {
+        font-size: 60px; /* Smaller main heading size */
+    }
+
+    .social-links i {
+        width: 30px; /* Smaller social icon size */
+        height: 30px; /* Smaller social icon size */
+        font-size: 18px; /* Smaller icon font size */
+    }
+
+    #pfp {
+        margin-top: 100px;
+        width: 400px; /* Smaller profile picture size */
+    }
+
+    .about-me {
+        padding: 0 30px; /* Reduce padding */
+    }
+
+    .card-wrapper {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .card {
+        width: 90%; /* Reduce card width */
+    }
+    #card1::before{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 315px;
+        background-color: #f10d9a;
+        left: 15px;
+        top: 55px;
+    }
+    #card2::before{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 230px;
+        background-color: #f10d9a;
+        left: 15px;
+        top: 55px;
+    }
+    
+    #card3::before{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 180px;
+        background-color: #f10d9a;
+        left: 15px;
+        top: 55px;
+    }
+    .tech {
+        flex-direction: column; /* Stack tech icons vertically */
+        align-items: center; /* Center tech icons */
+    }
+
+    .contact .input-boxes {
+        margin: 0 50px;
+        padding: 0 20px; /* Reduce padding for contact form */
+    }
+
+    #name, #e-mail, #subject {
+        height: 40px; /* Smaller input height */
+    }
+
+    #message {
+        height: 150px; /* Smaller message box */
+    }
+}
+
+@media (max-width: 800px){
+    
+    .nav-bar {
+        padding: 0 10px; /* Further reduce padding for smaller screens */
+    }
+    
+    #logo {
+        font-size: 28px; /* Smaller logo font size */
+    }
+    .home{
+        margin-top: 100px;
+    }
+
+    .home h2 {
+        font-size: 36px; /* Smaller heading size */
+    }
+
+    .home h1 {
+        font-size: 50px; /* Smaller main heading size */
+    }
+
+    .social-links i {
+        width: 25px; /* Smaller social icon size */
+        height: 25px; /* Smaller social icon size */
+        font-size: 16px; /* Smaller icon font size */
+    }
+
+    #pfp {
+        margin-top: 100px;
+        width: 400px; 
+        margin-left: 150px;/* Smaller profile picture size */
+    }
+
+    .about-me {
+        padding: 0 30px; /* Further reduce padding */
+    }
+
+    .card-wrapper {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards */
+    }
+
+    .card {
+        width: 95%; /* Reduce card width */
+    }
+
+    #card1::before{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 335px;
+        background-color: #f10d9a;
+        left: 15px;
+        top: 55px;
+    }
+    #card2::before{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 230px;
+        background-color: #f10d9a;
+        left: 15px;
+        top: 55px;
+    }
+    
+    #card3::before{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 180px;
+        background-color: #f10d9a;
+        left: 15px;
+        top: 55px;
+    }
+    .tech {
+        flex-direction: column; /* Stack tech icons vertically */
+        align-items: center; /* Center tech icons */
+    }
+
+    .contact .input-boxes {
+        margin: 0 50px;
+        padding: 0 10px; /* Further reduce padding for contact form */
+    }
+
+    #name, #e-mail, #subject {
+        height: 35px; /* Smaller input height */
+    }
+
+    #message {
+        height: 120px; /* Smaller message box */
+    }
+
+}
+    
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stacks items vertically */
+    }
+
+    .right {
+        order: -1; /* Places the image first */
+    }
+
+    .left {
+        text-align: center; /* Centers the text on smaller screens */
+    }
+
+    #pfp {
+        width: 100%; /* Adjust the image size to fit the screen */
+        max-width: 400px; /* Optional: Set a max width to control the image size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 100px;
+    }
+
+    .social-links {
+        margin-top: 20px; /* Adds some space between text and social links */
+    }
+}
+
+@media (max-width: 400px) {
+    .tech {
+        flex-direction: column; /* Stack tech icons vertically for small screens */
+        align-items: center; /* Center tech icons */
+        gap: 15px; /* Reduce gap between icons */
+    }
+    .home h1,h2 {
+
+        font-size: 50px; 
+        white-space: nowrap; 
+    }
+    .home {
+        flex-direction: column; /* Stacks items vertically */
+        padding-left: 200px;
+    }
+    #pfp{
+        width: 350px;
+    }
+    .right {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: -1; /* Places the image first */
+    }
+
+    .left {
+        padding: 0 0;
+        margin-top: 5px;
+        text-align: center; /* Centers the text on smaller screens */
+    }
+
+    .social-links i {
+        width: 25px; /* Smaller social icon size */
+        height: 25px; /* Smaller social icon size */
+        font-size: 16px; /* Smaller icon font size */
+    }
+
+    .about-me{
+        padding: 0 10px;
+    }
+    .tech-icons {
+        flex: 0 0 100%; /* Each icon takes the full width */
+        max-width: 100%; /* Ensure the icon does not exceed the screen width */
+        padding: 10px; /* Add some padding for touch targets */
+    }
+
+    .tech-icons img {
+        width: 150px; /* Set a smaller width for images */
+        height: 150px; /* Set a smaller height for images */
+    }
+
+    .tech-icons span {
+        font-size: 16px; /* Smaller font size for text inside tech icons */
+    }
+}
