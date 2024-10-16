@@ -35,7 +35,12 @@ html {
     font-weight: 600;
     color: #f10d9a;
 }
-
+#cross-icon {
+    cursor: pointer;
+    margin-left: auto; 
+    padding-right: 10px;
+    padding-top: 20px;
+}
 .side-menu{
     position: fixed;
     top: 0;
@@ -104,10 +109,9 @@ html {
 .home{
     display: flex;
     padding: 0 150px;
-}
-
-.left{
-    margin-top: 200px;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .home h2{
@@ -150,9 +154,6 @@ html {
     border: none;
 }
 
-.right{
-    margin-top: 150px;
-}
 
 #pfp{
     width: 400px;
@@ -179,7 +180,6 @@ h1 span{
 }
 
 .headings{
-    margin-top: 250px;
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -252,9 +252,11 @@ h1 span{
 
 .education h1{
     margin-top: 100px;
+    margin-bottom: 30px
 }
 
 .card-wrapper{
+    
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
