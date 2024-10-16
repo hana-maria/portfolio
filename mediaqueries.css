@@ -141,6 +141,7 @@
         justify-content: center;
         align-items: center;
     }
+
     .about-me{
         margin-top: 100px;
         padding: 0 15px;
@@ -148,6 +149,12 @@
 
     .card-wrapper{
         margin: 0 20px;
+    }
+    .tech-icons img {
+        width: 100px;      
+        height: 100px;     
+        object-fit: cover; 
+        padding: 20px 20px;
     }
     .line1-inputs{
         display: flex;
