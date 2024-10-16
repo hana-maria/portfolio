@@ -22,9 +22,8 @@
     }
 
     #pfp {
-        margin-left: 0; 
         margin-top: 100px; 
-        width: 350px;
+        width: 300px;
         order: 1;
     }
 
@@ -40,8 +39,21 @@
         margin-left: 0; 
     }
 
+    .home h1{
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    .home h2{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .home h3{
+        font-size: 15px;
+    }
+
     .social-links {
         justify-content: center; 
+        margin-top: 20px;
     }
     h1 span{
         font-size: 40px;
@@ -85,7 +97,7 @@
     #pfp {
         margin-left: 0; 
         margin-top: 100px; 
-        width: 350px;
+        width: 300px;
         order: 1;
     }
 
